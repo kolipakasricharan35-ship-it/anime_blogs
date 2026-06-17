@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime World Blog</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    background:linear-gradient(90deg,#ff006e,#8338ec);
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:40px;
+    margin:0;
+}
+
+nav{
+    display:flex;
+    justify-content:flex-end;
+    gap:30px;
+    margin:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    height:500px;
+    background:url('https://maverickathleisure.com/wp-content/uploads/2023/03/Top-10-Best-Anime-Image-Pinterest.jpg') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:10px;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.blogs{
+    padding:50px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:35px;
+    color:#ff006e;
+}
+
+.blog-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e1e1e;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#ffbe0b;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#ff006e;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+    cursor:pointer;
+    border:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff1493;
+}
+
+.expanded-content{
+    display:none;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:2px solid #ff006e;
+    animation:slideDown 0.3s ease-in;
+}
+
+.expanded-content h4{
+    color:#ffbe0b;
+    margin:15px 0 10px 0;
+    font-size:16px;
+}
+
+.expanded-content p{
+    line-height:1.7;
+    margin-bottom:10px;
+    color:#ddd;
+}
+
+.close-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#8338ec;
+    color:white;
+    padding:8px 12px;
+    text-decoration:none;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.close-btn:hover{
+    background:#a855f7;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        max-height:0;
+    }
+    to{
+        opacity:1;
+        max-height:1000px;
+    }
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Anime World Blog</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Anime Reviews</a>
+        <a href="#">Top Lists</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Welcome Anime Fans!</h2>
+        <p>Discover reviews, rankings, recommendations and anime news.</p>
+    </div>
+</section>
+
+<section class="blogs">
+    <h2 class="section-title">Latest Anime Blogs</h2>
+
+    <div class="blog-container">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjIjo35qK_wikMncofx0BnPEsx0KNGmQ5IjQ&s" alt="">
+            <div class="card-content">
+                <h3>Attack on Titan Review</h3>
+                <p>
+                    Attack on Titan is one of the greatest dark fantasy anime.
+                    The story follows Eren Yeager as humanity fights against
+                    gigantic Titans. Known for its plot twists, emotional moments,
+                    and incredible animation.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>Full Review</h4>
+                    <p>Attack on Titan stands as a masterpiece in anime storytelling. The narrative complexity, character development, and world-building are unparalleled in the industry.</p>
+                    <p><strong>Plot:</strong> The story follows Eren Yeager and his companions as they uncover the truth behind the walls and the mysterious titans that threaten humanity's existence.</p>
+                    <p><strong>Animation:</strong> The animation quality is exceptional, with stunning fight sequences and detailed backgrounds that bring the story to life.</p>
+                    <p><strong>Characters:</strong> Each character has depth and undergoes significant development throughout the series. The relationships between characters are compelling and emotionally impactful.</p>
+                    <p><strong>Themes:</strong> Explores freedom, sacrifice, morality, and the cost of war. These themes resonate deeply with viewers and provoke meaningful discussions.</p>
+                    <p><strong>Rating:</strong> 9.5/10 - A must-watch for any anime enthusiast.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/91MQt5wnrtL._AC_UF350,350_QL80_.jpg" alt="">
+            <div class="card-content">
+                <h3>Naruto's Journey</h3>
+                <p>
+                    Naruto tells the story of a young ninja seeking recognition
+                    and dreaming of becoming Hokage. The anime is famous for
+                    its inspiring character growth and unforgettable battles.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>The Path of the Ninja</h4>
+                    <p>Naruto Uzumaki's journey from an outcast to a beloved hero is one of the most inspiring stories in anime history.</p>
+                    <p><strong>Story Arc:</strong> Starting as a mischievous orphan, Naruto joins the ninja academy and eventually becomes one of the most powerful shinobi in the world.</p>
+                    <p><strong>Character Growth:</strong> Naruto's development is gradual and realistic. He learns about friendship, sacrifice, and the true meaning of being a ninja.</p>
+                    <p><strong>Friendships:</strong> The bonds between Naruto, Sasuke, and Sakura form the emotional core of the series. Their relationships are tested and strengthened throughout.</p>
+                    <p><strong>Action Sequences:</strong> The fight scenes are creative and intense, featuring unique jutsu techniques and strategic battles.</p>
+                    <p><strong>Life Lessons:</strong> Naruto teaches valuable lessons about perseverance, never giving up, and believing in yourself even when others doubt you.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCX_nNj7KdQ4mtVXYmjQrAhhbty4vPrUhuPw&s" alt="">
+            <div class="card-content">
+                <h3>Demon Slayer Success</h3>
+                <p>
+                    Demon Slayer became a global phenomenon because of its
+                    breathtaking animation and emotional storytelling. Tanjiro's
+                    journey to save his sister Nezuko inspires millions.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>Breathing Techniques and Brotherhood</h4>
+                    <p>Demon Slayer revolutionized the anime industry with its exceptional animation quality and emotional depth.</p>
+                    <p><strong>Visual Excellence:</strong> The animation by Ufotable is breathtaking. Every frame is meticulously detailed with stunning color palettes and fluid action sequences.</p>
+                    <p><strong>Story:</strong> Tanjiro's quest to save his demon-turned sister Nezuko is emotionally compelling and drives the entire narrative forward.</p>
+                    <p><strong>Soundtrack:</strong> The opening and ending themes are iconic. The background music perfectly complements every scene.</p>
+                    <p><strong>Character Development:</strong> Tanjiro's growth from a coal seller to a powerful Demon Slayer is believable and inspiring.</p>
+                    <p><strong>World Building:</strong> The system of breathing techniques and demon hierarchies creates a rich, detailed world.</p>
+                    <p><strong>Rating:</strong> 9/10 - A visual and emotional masterpiece.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX_SVPT2e_D30EXwFDaRCb48ZVCXdb6W00PQ&s" alt="">
+            <div class="card-content">
+                <h3>One Piece Adventure</h3>
+                <p>
+                    One Piece follows Monkey D. Luffy and his pirate crew in
+                    search of the legendary treasure. It is celebrated for its
+                    world-building, humor, and emotional storytelling.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>The Greatest Adventure on the Seas</h4>
+                    <p>One Piece is not just an anime; it's a cultural phenomenon that has captured the hearts of millions worldwide.</p>
+                    <p><strong>Longevity:</strong> Running for over 20 years, One Piece has maintained consistent quality and fan engagement throughout.</p>
+                    <p><strong>World Building:</strong> The Grand Line is a vast, mysterious world filled with unique islands, cultures, and dangers.</p>
+                    <p><strong>Character Development:</strong> Each crew member has a compelling backstory and personal goals that complement Luffy's dream.</p>
+                    <p><strong>Humor and Heart:</strong> The series perfectly balances comedy with emotional moments, making it endearing to audiences.</p>
+                    <p><strong>Mystery:</strong> The overarching mystery of the One Piece treasure keeps viewers engaged and theorizing.</p>
+                    <p><strong>Rating:</strong> 9.5/10 - An absolute masterpiece and must-watch for all anime fans.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://wallpapercave.com/wp/wp8936510.jpg" alt="">
+            <div class="card-content">
+                <h3>Jujutsu Kaisen</h3>
+                <p>
+                    Jujutsu Kaisen combines supernatural action, amazing fight
+                    choreography, and memorable characters. Yuji Itadori enters
+                    a dangerous world of curses and sorcerers.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>Curses, Sorcery, and Sacrifice</h4>
+                    <p>Jujutsu Kaisen is a modern masterpiece that combines dark themes with exceptional storytelling and animation.</p>
+                    <p><strong>Premise:</strong> Yuji Itadori swallows a cursed finger and becomes the host of a powerful demon, leading him into the world of jujutsu sorcery.</p>
+                    <p><strong>Fight Choreography:</strong> The action sequences are intensely detailed and creative, showcasing unique abilities and strategies.</p>
+                    <p><strong>Characters:</strong> The cast is diverse and well-developed. From the protagonist to supporting characters, everyone has depth and complexity.</p>
+                    <p><strong>Dark Themes:</strong> The anime doesn't shy away from discussing death, morality, and the cost of power.</p>
+                    <p><strong>Animation Quality:</strong> MAPPA delivers consistently excellent animation throughout the series.</p>
+                    <p><strong>Rating:</strong> 9/10 - A thrilling supernatural adventure that keeps you on the edge of your seat.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://fwmedia.fandomwire.com/wp-content/uploads/2026/02/24114229/one-piece-swordsman-vs-demon-slayer-hashira.jpg" alt="">
+            <div class="card-content">
+                <h3>Top Anime of All Time</h3>
+                <p>
+                    Popular anime include Attack on Titan, Fullmetal Alchemist:
+                    Brotherhood, Death Note, Naruto, One Piece, Demon Slayer,
+                    and Jujutsu Kaisen. Each offers unique storytelling and
+                    unforgettable characters.
+                </p>
+                <button class="btn" onclick="toggleContent(this)">Read More</button>
+                <div class="expanded-content">
+                    <h4>Legendary Anime That Defined the Industry</h4>
+                    <p>These timeless masterpieces have influenced countless viewers and set the standard for quality anime production.</p>
+                    <p><strong>Attack on Titan:</strong> A dark, complex narrative with incredible world-building and character development.</p>
+                    <p><strong>Fullmetal Alchemist Brotherhood:</strong> Often regarded as the best anime ever made. Perfect pacing, story, and emotional impact.</p>
+                    <p><strong>Death Note:</strong> A psychological thriller that keeps you guessing. Excellent cat-and-mouse dynamic between protagonist and antagonist.</p>
+                    <p><strong>Naruto:</strong> An inspiring journey about friendship, perseverance, and achieving your dreams against all odds.</p>
+                    <p><strong>One Piece:</strong> An epic adventure with incredible world-building, humor, and emotional depth that spans decades.</p>
+                    <p><strong>Demon Slayer:</strong> Modern animation excellence combined with emotional storytelling and stunning visuals.</p>
+                    <p><strong>Jujutsu Kaisen:</strong> A contemporary masterpiece with dark themes, incredible action, and deep character development.</p>
+                    <button class="close-btn" onclick="toggleContent(this)">← Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Anime World Blog | Designed by Sri Charan</p>
+</footer>
+
+<script>
+function toggleContent(btn){
+    const expandedContent = btn.nextElementSibling;
+    const isVisible = expandedContent.style.display === 'block';
+    
+    if(isVisible){
+        expandedContent.style.display = 'none';
+    } else {
+        expandedContent.style.display = 'block';
+    }
+}
+</script>
+
+</body>
+</html>
